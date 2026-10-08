@@ -24,6 +24,7 @@ import { TopicsPage } from '@/pages/TopicsPage'
 import { AvailabilityPage } from '@/pages/AvailabilityPage'
 import { StudyPlanPage } from '@/pages/StudyPlanPage'
 import { AnalyticsPage } from '@/pages/AnalyticsPage'
+import { AssistantPage } from '@/pages/AssistantPage'
 
 const features = [
   {
@@ -423,6 +424,7 @@ function App() {
           <Route path="/plan" element={<StudyPlanPage />} />
           <Route path="/calendar" element={<StudyPlanPage calendarOnly />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/assistant" element={<AssistantPage />} />
         </Route>
         <Route path="*" element={<HomePage />} />
       </Routes>

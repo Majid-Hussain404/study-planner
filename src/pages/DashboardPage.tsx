@@ -4,6 +4,7 @@ import {
   CalendarDays,
   Clock3,
   ChartNoAxesColumnIncreasing,
+  Sparkles,
   LogOut,
   UserRound,
   ListTodo,
@@ -86,6 +87,11 @@ export function DashboardPage() {
           <Button asChild variant="outline" className="rounded-full">
             <Link to="/analytics">
               <ChartNoAxesColumnIncreasing size={16} /> Study analytics
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/assistant">
+              <Sparkles size={16} /> Ask study assistant
             </Link>
           </Button>
         </div>
