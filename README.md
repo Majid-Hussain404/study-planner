@@ -1,6 +1,6 @@
 # AI Study Planner
 
-An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. It includes a responsive landing page, Supabase authentication flow, profile and subject/topic management, deadlines, weekly availability, study plan generation, a session calendar, and a persistent study timer. Analytics and AI recommendations are planned for a later phase.
+An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. It includes a responsive landing page, Supabase authentication flow, profile and subject/topic management, deadlines, weekly availability, study plan generation, a session calendar, a persistent study timer, and personal analytics with progress-based study suggestions.
 
 ## Technology
 
@@ -76,7 +76,7 @@ npm run format        # Format project files with Prettier
 2. Supabase sign-up, login, session persistence, protected routes, and initial schema — scaffolded; requires Supabase credentials for end-to-end use
 3. Profile, subjects, topics, exams, assignments, and availability — implemented
 4. Scheduling algorithm, calendar, study sessions, and persistent timer — implemented
-5. Analytics and server-side AI recommendations
-6. Security review, tests, deployment, and college project documentation
+5. Analytics dashboard and progress-based study suggestions — implemented; AI assistant remains
+6. AI study assistant, revision plans, notes, notifications, security review, deployment, and college project documentation
 
-Supabase credentials and the database migrations are required before authentication and planner data can be used end to end. AI recommendations and analytics endpoints are not implemented yet.
+Supabase credentials and the database migrations are required before authentication and analytics can use personal data. AI chat recommendations still require a secure server-side integration and an OpenAI API key.

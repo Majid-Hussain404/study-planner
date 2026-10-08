@@ -3,6 +3,7 @@ import {
   CalendarClock,
   CalendarDays,
   Clock3,
+  ChartNoAxesColumnIncreasing,
   LogOut,
   UserRound,
   ListTodo,
@@ -80,6 +81,11 @@ export function DashboardPage() {
           <Button asChild variant="outline" className="rounded-full">
             <Link to="/plan">
               <CalendarDays size={16} /> Generate study plan
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/analytics">
+              <ChartNoAxesColumnIncreasing size={16} /> Study analytics
             </Link>
           </Button>
         </div>
