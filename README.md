@@ -1,6 +1,6 @@
 # AI Study Planner
 
-An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. This project is being built in phases; the landing page, responsive layouts, Express health endpoint, and Supabase authentication flow are in place. Academic planning and AI features are still under development.
+An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. The responsive landing page, Express health endpoint, Supabase authentication flow, profile editor, subject/topic tracking, and exam/assignment deadline management are in place. Study scheduling and AI features are still under development.
 
 ## Technology
 
@@ -73,7 +73,7 @@ npm run format        # Format project files with Prettier
 
 1. Landing page and initial frontend/backend setup — complete
 2. Supabase sign-up, login, session persistence, protected routes, and initial schema — scaffolded; requires Supabase credentials for end-to-end use
-3. Profile, subjects, topics, exams, assignments, and availability
+3. Profile, subjects, topics, exams, and assignments — implemented; availability editor remains
 4. Scheduling algorithm, calendar, study sessions, and progress
 5. Analytics and server-side AI recommendations
 6. Security review, tests, deployment, and college project documentation
