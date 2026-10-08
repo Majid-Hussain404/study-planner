@@ -1,4 +1,10 @@
-import { BookOpen, LogOut, UserRound } from 'lucide-react'
+import {
+  BookOpen,
+  CalendarClock,
+  LogOut,
+  UserRound,
+  ListTodo,
+} from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/contexts/AuthContext'
@@ -52,6 +58,16 @@ export function DashboardPage() {
           <Button asChild variant="outline" className="rounded-full">
             <Link to="/profile">
               <UserRound size={16} /> Edit profile
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/topics">
+              <ListTodo size={16} /> Topics &amp; progress
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/deadlines">
+              <CalendarClock size={16} /> Exams &amp; deadlines
             </Link>
           </Button>
         </div>

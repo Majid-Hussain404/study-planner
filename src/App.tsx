@@ -19,6 +19,8 @@ import { AuthPage } from '@/pages/AuthPage'
 import { DashboardPage } from '@/pages/DashboardPage'
 import { SubjectsPage } from '@/pages/SubjectsPage'
 import { ProfilePage } from '@/pages/ProfilePage'
+import { DeadlinesPage } from '@/pages/DeadlinesPage'
+import { TopicsPage } from '@/pages/TopicsPage'
 
 const features = [
   {
@@ -412,6 +414,8 @@ function App() {
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/subjects" element={<SubjectsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/deadlines" element={<DeadlinesPage />} />
+          <Route path="/topics" element={<TopicsPage />} />
         </Route>
         <Route path="*" element={<HomePage />} />
       </Routes>
