@@ -1,5 +1,5 @@
-import { LogOut } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { BookOpen, LogOut, UserRound } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/contexts/AuthContext'
 import { supabase } from '@/lib/supabase'
@@ -40,6 +40,21 @@ export function DashboardPage() {
           Your account is connected. Subject tracking and personalized plans
           will appear here as the next features are built.
         </p>
+        <div className="mt-7 flex flex-wrap gap-3">
+          <Button
+            asChild
+            className="rounded-full bg-[#214d3c] text-white hover:bg-[#193d30]"
+          >
+            <Link to="/subjects">
+              <BookOpen size={16} /> Manage subjects
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/profile">
+              <UserRound size={16} /> Edit profile
+            </Link>
+          </Button>
+        </div>
       </section>
     </main>
   )

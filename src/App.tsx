@@ -17,6 +17,8 @@ import { Button } from '@/components/ui/button'
 import { RequireAuth } from '@/components/RequireAuth'
 import { AuthPage } from '@/pages/AuthPage'
 import { DashboardPage } from '@/pages/DashboardPage'
+import { SubjectsPage } from '@/pages/SubjectsPage'
+import { ProfilePage } from '@/pages/ProfilePage'
 
 const features = [
   {
@@ -276,8 +278,8 @@ function HomePage() {
                 </div>
               </div>
               <div className="mt-5 flex items-center gap-2 border-t border-[#edf0e9] pt-4 text-xs text-[#667467]">
-                <Sparkles size={14} className="text-[#548067]" /> Balanced
-                An example balanced around deadlines and study time
+                <Sparkles size={14} className="text-[#548067]" /> Balanced An
+                example balanced around deadlines and study time
               </div>
             </div>
           </div>
@@ -408,6 +410,8 @@ function App() {
         <Route path="/register" element={<AuthPage mode="register" />} />
         <Route element={<RequireAuth />}>
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/subjects" element={<SubjectsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
         <Route path="*" element={<HomePage />} />
       </Routes>
