@@ -1,6 +1,8 @@
 import {
   BookOpen,
   CalendarClock,
+  CalendarDays,
+  Clock3,
   LogOut,
   UserRound,
   ListTodo,
@@ -68,6 +70,16 @@ export function DashboardPage() {
           <Button asChild variant="outline" className="rounded-full">
             <Link to="/deadlines">
               <CalendarClock size={16} /> Exams &amp; deadlines
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/availability">
+              <Clock3 size={16} /> Study availability
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link to="/plan">
+              <CalendarDays size={16} /> Generate study plan
             </Link>
           </Button>
         </div>

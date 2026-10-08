@@ -1,6 +1,6 @@
 # AI Study Planner
 
-An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. The responsive landing page, Express health endpoint, Supabase authentication flow, profile editor, subject/topic tracking, and exam/assignment deadline management are in place. Study scheduling and AI features are still under development.
+An AI-assisted study planner for organizing subjects, deadlines, study time, and progress. It includes a responsive landing page, Supabase authentication flow, profile and subject/topic management, deadlines, weekly availability, study plan generation, a session calendar, and a persistent study timer. Analytics and AI recommendations are planned for a later phase.
 
 ## Technology
 
@@ -36,7 +36,7 @@ The Vite app runs at `http://localhost:5173`; the API runs at `http://localhost:
 
 ## Database setup
 
-Create a Supabase project, then open its SQL Editor and run [`database/migrations/0001_initial_schema.sql`](./database/migrations/0001_initial_schema.sql). The migration creates the initial profile and study-planning tables, owner-scoped Row Level Security policies, and a profile trigger for new accounts. Configure the project URL and public anon key in `.env` before testing registration.
+Create a Supabase project, then open its SQL Editor and run [`database/migrations/0001_initial_schema.sql`](./database/migrations/0001_initial_schema.sql), followed by [`database/migrations/0002_session_timer.sql`](./database/migrations/0002_session_timer.sql). These migrations create the profile and study-planning tables, owner-scoped Row Level Security policies, a profile trigger for new accounts, and the persistent session timer field. Configure the project URL and public anon key in `.env` before using the app.
 
 ## Environment variables
 
@@ -60,6 +60,7 @@ Authentication routes are available at `/register` and `/login`. Until Supabase 
 npm run dev:all       # Start the frontend and API
 npm run build         # Type-check and build frontend and API
 npm run lint          # Run ESLint
+npm run test          # Run scheduler tests
 npm run format        # Format project files with Prettier
 ```
 
@@ -73,9 +74,9 @@ npm run format        # Format project files with Prettier
 
 1. Landing page and initial frontend/backend setup — complete
 2. Supabase sign-up, login, session persistence, protected routes, and initial schema — scaffolded; requires Supabase credentials for end-to-end use
-3. Profile, subjects, topics, exams, and assignments — implemented; availability editor remains
-4. Scheduling algorithm, calendar, study sessions, and progress
+3. Profile, subjects, topics, exams, assignments, and availability — implemented
+4. Scheduling algorithm, calendar, study sessions, and persistent timer — implemented
 5. Analytics and server-side AI recommendations
 6. Security review, tests, deployment, and college project documentation
 
-The planner and AI endpoints are not implemented yet. Credentials and a Supabase project are required before authentication can be exercised end to end.
+Supabase credentials and the database migrations are required before authentication and planner data can be used end to end. AI recommendations and analytics endpoints are not implemented yet.
